@@ -1,0 +1,67 @@
+# ערן שומרון יועצים — Generative Engine Optimization Map
+
+> A B2B-focused business targeting low-tech industry owners, factory operators, and traditional industrial businesses. The brand serves a practical, results-driven audience that values reliability, efficiency, and straightforward solutions over high-tech complexity. The tone is professional and grounded, appealing to hands-on business owners in manufacturing and industrial sectors.
+
+---
+
+## Pages
+
+### בית
+https://-4244d7f1.zappy5.app
+A B2B-focused business targeting low-tech industry owners, factory operators, and traditional industrial businesses. The brand serves a practical, results-drive
+
+## Legal & Policy
+
+### Privacy Policy
+https://-4244d7f1.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://-4244d7f1.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://-4244d7f1.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+## How to Contact Us
+
+- (No contact details configured yet.)
+
+### Contact form
+- URL: https://-4244d7f1.zappy5.app
+- Endpoint: https://-4244d7f1.zappy5.app/api/email/contact-form
+- Method: POST
+- Content-Type: application/json
+- Fields:
+  - `name` (text, required)
+  - `email` (email, required)
+  - `phone` (tel, required)
+  - `message` (textarea)
+  - `privacy_consent` (checkbox, required)
+
+---
+
+# Business Context (for LLM understanding)
+
+## About ערן שומרון יועצים
+A B2B-focused business targeting low-tech industry owners, factory operators, and traditional industrial businesses. The brand serves a practical, results-driven audience that values reliability, efficiency, and straightforward solutions over high-tech complexity. The tone is professional and grounded, appealing to hands-on business owners in manufacturing and industrial sectors.
+
+## Target Audience
+- בעלי עסקים מתחום הלואו טק, מפעלים, תעשייה
+- בעלי עסקים לואו-טק
+- מנהלי מפעלים תעשייתיים
+- מנהיגי תעשייה מסורתית
+
+## Industry
+שירותים לעסקים (B2B)
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://-4244d7f1.zappy5.app/sitemap.xml
+- Robots: https://-4244d7f1.zappy5.app/robots.txt
+- Flattened page text (for LLMs): https://-4244d7f1.zappy5.app/llms-full.txt
