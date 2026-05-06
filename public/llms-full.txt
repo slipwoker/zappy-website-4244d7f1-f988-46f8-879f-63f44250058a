@@ -2,13 +2,13 @@
 
 A B2B-focused business targeting low-tech industry owners, factory operators, and traditional industrial businesses. The brand serves a practical, results-driven audience that values reliability, efficiency, and straightforward solutions over high-tech complexity. The tone is professional and grounded, appealing to hands-on business owners in manufacturing and industrial sectors.
 
-Source: https://-4244d7f1.zappy5.app
+Source: https://example.com
 
 ---
 
 ## ערן שומרון יועצים — ערן שומרון יועצים
 
-URL: https://-4244d7f1.zappy5.app
+URL: https://example.com
 Description: A B2B-focused business targeting low-tech industry owners, factory operators, and traditional industrial businesses. The brand serves a practical, results-drive
 
 ערן שומרון יועצים — ערן שומרון יועצים
@@ -727,7 +727,7 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 ## מדיניות פרטיות
 
-URL: https://-4244d7f1.zappy5.app/privacy
+URL: https://example.com/privacy
 Description: מדיניות הפרטיות שלנו - כיצד אנו אוספים, משתמשים ומגנים על המידע שלכם
 
 מדיניות פרטיות
@@ -992,7 +992,7 @@ Description: מדיניות הפרטיות שלנו - כיצד אנו אוספי
 
 ## הצהרת נגישות
 
-URL: https://-4244d7f1.zappy5.app/accessibility
+URL: https://example.com/accessibility
 Description: הצהרת הנגישות שלנו - מחויבותנו לנגישות דיגיטלית
 
 הצהרת נגישות
@@ -1266,7 +1266,7 @@ Description: הצהרת הנגישות שלנו - מחויבותנו לנגיש�
 
 ## תנאי שימוש
 
-URL: https://-4244d7f1.zappy5.app/terms
+URL: https://example.com/terms
 Description: תנאי השימוש באתר - הזכויות והחובות של המשתמשים
 
 תנאי שימוש
