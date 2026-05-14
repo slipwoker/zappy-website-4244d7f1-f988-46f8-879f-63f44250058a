@@ -93,13 +93,13 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 
 
-ייעוץ עסקי לתעשייה ולייצור
+ייעוץ עסקי לעסקים בתחומי התעשייה וייצור
 
 # מגדילים רווחים.מייעלים תהליכים.בלי סיבוכים.
 
 
 
-### ייעוץ ישיר ומעשי לבעלי מפעלים ועסקים מסורתיים — תוצאות מדידות, שפה פשוטה, הבנה אמיתית של השטח. טסט של מירי
+### ייעוץ ישיר ומעשי לבעלי מפעלים ותעשיות —תוצאות מדידות, שפה פשוטה, הבנה אמיתית של השטח.
 
 
 
@@ -225,6 +225,7 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 
 
+
 מי אנחנו
 
 ## ייעוץ עסקי שמבין אתהרצפה, לא רק את הגרפים
@@ -242,7 +243,7 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 - ### מיקוד בתוצאות מדידות כל המלצה נמדדת לפי השפעתה על הרווחיות, היעילות ושביעות רצון הלקוחות.
 
-- ### ניסיון בשטח, לא בכיתה הידע שלנו נצבר ממפעלים ועסקים אמיתיים — לא מספרי לימוד.
+- ### ניסיון בשטח, לא בתאוריה הידע שלנו נצבר ממפעלים ועסקים אמיתיים — לא מספרי לימוד.
 
 
 
@@ -257,8 +258,9 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 
 
-+200
++2000
 עסקים שיפרו תוצאות
+
 
 
 
@@ -325,14 +327,14 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 
 
-הניהול שלי השתפר פלאים. ערן עזר לי להבין איפה אני מבזבז זמן ואנרגיה, ואיך לבנות מערכת ניהול שעובדת בלעדיי. היום אני מקבל החלטות עסקיות בביטחון מלא.
+"בנינו מערכת ניהול שמאפשרת להעביר סמכויות וככה החברה יכולה להתנהל גם בלעדיי".
 
 
 
-מ
+א
 
-משה כהן
-מנהל תפעול, חברת לוגיסטיקה
+אור פקרמן
+מייסד ובעלים, פקרמן הנדסה ואדריכלות
 
 
 
@@ -388,7 +390,7 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 
 
-+20
++10
 
 ### שנות ניסיון
 
@@ -410,7 +412,7 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 
 
-+300
++500
 
 ### סדנאות ניהול
 
@@ -548,12 +550,9 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 
 
-## מוכנים לשיפור אמיתי בעסק שלכם?
+##
 
-
-דברו ישירות עם יועץ שמכיר מפעלים, תהליכי ייצור ועסקים מסורתיים — ללא עגה מיותרת, עם תוצאות מדידות.
-
-
+# מוכנים לשיפור אמיתי בעסק שלכם?
 
 
 
@@ -562,7 +561,12 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 
 
-### בואו נדבר על העסק שלכם
+
+
+
+###
+
+## בואו נדבר על העסק שלכם
 
 
 ייעוץ עסקי למפעלים תעשייתיים — שיחה ראשונה ללא עלות, ללא התחייבות. נבין יחד איפה אתם עומדים ואיך ממשיכים משם.
@@ -579,18 +583,40 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 
 
-
 התקשרו עכשיו לשיחה ראשונה
 
 
 
-
-
-[business_email]
+miri@e-effective.co.il
 
 
 
-[business_phone]
++972-50-5912360
+
+
+
+
+
+
+#### שעות פעילות
+
+
+- יום ראשון: 09:00 - 17:00
+
+- יום שני: 09:00 - 17:00
+
+- יום שלישי: 09:00 - 17:00
+
+- יום רביעי: 09:00 - 17:00
+
+- יום חמישי: 09:00 - 17:00
+
+- יום שישי: 09:00 - 13:00
+
+- יום שבת: סגור
+
+
+
 
 
 
@@ -682,11 +708,11 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 ### צרו קשר
 
 
-- [business_email]
+- miri@e-effective.co.il
 
-- [business_phone]
+- +972-50-5912360
 
-- [business_address]
+- תוצרת הארץ 3 - BSR CITY, פתח תקווה, בניין Y, קומה 4
 
 
 
@@ -885,11 +911,11 @@ Description: מדיניות הפרטיות שלנו - כיצד אנו אוספי
 
 - חברה: ערן שומרון יועצים
 
-- אימייל: [business_email]
+- אימייל: miri@e-effective.co.il
 
-- טלפון: [business_phone]
+- טלפון: +972-50-5912360
 
-- כתובת: [business_address]
+- כתובת: תוצרת הארץ 3 - BSR CITY, פתח תקווה, בניין Y, קומה 4
 
 
 
@@ -947,11 +973,11 @@ Description: מדיניות הפרטיות שלנו - כיצד אנו אוספי
 ### צרו קשר
 
 
-- [business_email]
+- miri@e-effective.co.il
 
-- [business_phone]
+- +972-50-5912360
 
-- [business_address]
+- תוצרת הארץ 3 - BSR CITY, פתח תקווה, בניין Y, קומה 4
 
 
 
@@ -1158,9 +1184,9 @@ Description: הצהרת הנגישות שלנו - מחויבותנו לנגיש�
 
 - חברה: ערן שומרון יועצים
 
-- אימייל: [business_email]
+- אימייל: miri@e-effective.co.il
 
-- טלפון: [business_phone]
+- טלפון: +972-50-5912360
 
 
 
@@ -1221,11 +1247,11 @@ Description: הצהרת הנגישות שלנו - מחויבותנו לנגיש�
 ### צרו קשר
 
 
-- [business_email]
+- miri@e-effective.co.il
 
-- [business_phone]
+- +972-50-5912360
 
-- [business_address]
+- תוצרת הארץ 3 - BSR CITY, פתח תקווה, בניין Y, קומה 4
 
 
 
@@ -1455,11 +1481,11 @@ Description: תנאי השימוש באתר - הזכויות והחובות של
 
 - חברה: ערן שומרון יועצים
 
-- אימייל: [business_email]
+- אימייל: miri@e-effective.co.il
 
-- טלפון: [business_phone]
+- טלפון: +972-50-5912360
 
-- כתובת: [business_address]
+- כתובת: תוצרת הארץ 3 - BSR CITY, פתח תקווה, בניין Y, קומה 4
 
 
 
@@ -1514,11 +1540,11 @@ Description: תנאי השימוש באתר - הזכויות והחובות של
 ### צרו קשר
 
 
-- [business_email]
+- miri@e-effective.co.il
 
-- [business_phone]
+- +972-50-5912360
 
-- [business_address]
+- תוצרת הארץ 3 - BSR CITY, פתח תקווה, בניין Y, קומה 4
 
 
 
