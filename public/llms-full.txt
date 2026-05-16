@@ -120,7 +120,7 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 
 
-התהליך שלנו
+# התהליך שלנו
 
 ## ייעוץ עסקי שמניע תוצאות אמיתיות
 
