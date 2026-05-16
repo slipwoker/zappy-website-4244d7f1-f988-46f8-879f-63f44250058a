@@ -5823,23 +5823,6 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 ._access-icon {
   display: flex !important;
 }
-
-.site-footer .footer-logo-wrap [data-zappy-zoom-wrapper="true"] {
-  width: 160px !important;
-  height: 60px !important;
-  overflow: visible !important;
-}
-
-.site-footer .footer-logo-wrap [data-zappy-zoom-wrapper="true"] img.logo {
-  position: static !important;
-  width: 160px !important;
-  height: auto !important;
-  max-width: 100% !important;
-  max-height: none !important;
-  object-fit: contain !important;
-  top: auto !important;
-  left: auto !important;
-}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
