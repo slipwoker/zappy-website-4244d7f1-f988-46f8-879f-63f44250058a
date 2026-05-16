@@ -406,7 +406,7 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 
 
-+150
++1000
 
 ### עסקים קיבלו ייעוץ
 
