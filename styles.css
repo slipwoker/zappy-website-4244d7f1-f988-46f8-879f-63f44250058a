@@ -2612,7 +2612,6 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   opacity: 0.88;
 }
 
-/* ── Container ── */
 .index-hero-section .index-hero-container {
   position: relative;
   z-index: 10;
@@ -2623,18 +2622,20 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   display: flex;
   align-items: center;
   min-height: 100vh;
+  justify-content: flex-end;
 }
 
-/* ── Content Group ── */
 .index-hero-section .index-hero-content {
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 20px;
   padding-top: 80px;
   padding-bottom: 40px;
   text-align: right;
+  margin-inline-start: auto;
+  margin-inline-end: 0;
 }
 
 /* ── Eyebrow ── */
@@ -2650,10 +2651,9 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
   line-height: 1.4;
 }
 
-/* ── H1 ── */
 .index-hero-section .index-hero-h1 {
   font-family: 'Rubik', sans-serif;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -5822,6 +5822,20 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 #mic-init-access-tool #mic-access-tool-general-button,
 ._access-icon {
   display: flex !important;
+}
+
+.index-hero-section .index-hero-h1 {
+  font-size: 4.5rem !important;
+}
+
+.index-hero-section .index-hero-container {
+  justify-content: flex-end !important;
+}
+
+.index-hero-section .index-hero-content {
+  align-items: flex-end !important;
+  margin-inline-start: auto !important;
+  margin-inline-end: 0 !important;
 }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
