@@ -2854,7 +2854,7 @@ html[dir="rtl"] .footer-contact li > a { flex-direction: row !important; }
 
 .index-services-section .index-services-label {
   display: inline-block;
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
