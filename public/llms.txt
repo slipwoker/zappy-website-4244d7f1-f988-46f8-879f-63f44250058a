@@ -7,21 +7,21 @@
 ## Pages
 
 ### בית
-https://eranshomronconsultants.zappy5.app
+https://eranshomron.co.il
 A B2B-focused business targeting low-tech industry owners, factory operators, and traditional industrial businesses. The brand serves a practical, results-drive
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://eranshomronconsultants.zappy5.app/privacy
+https://eranshomron.co.il/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://eranshomronconsultants.zappy5.app/terms
+https://eranshomron.co.il/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://eranshomronconsultants.zappy5.app/accessibility
+https://eranshomron.co.il/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
@@ -34,8 +34,8 @@ Information about WCAG compliance and accessibility features.
 - Address: תוצרת הארץ 3 - BSR CITY, פתח תקווה, בניין Y, קומה 4
 
 ### Contact form
-- URL: https://eranshomronconsultants.zappy5.app
-- Endpoint: https://eranshomronconsultants.zappy5.app/api/email/contact-form
+- URL: https://eranshomron.co.il
+- Endpoint: https://eranshomron.co.il/api/email/contact-form
 - Method: POST
 - Content-Type: application/json
 - Fields:
@@ -65,6 +65,6 @@ A B2B-focused business targeting low-tech industry owners, factory operators, an
 
 # Machine-readable feeds
 
-- Sitemap (XML): https://eranshomronconsultants.zappy5.app/sitemap.xml
-- Robots: https://eranshomronconsultants.zappy5.app/robots.txt
-- Flattened page text (for LLMs): https://eranshomronconsultants.zappy5.app/llms-full.txt
+- Sitemap (XML): https://eranshomron.co.il/sitemap.xml
+- Robots: https://eranshomron.co.il/robots.txt
+- Flattened page text (for LLMs): https://eranshomron.co.il/llms-full.txt
