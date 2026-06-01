@@ -62,7 +62,6 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 
 
-
 - התהליך
 - אודות
 - המלצות
@@ -803,7 +802,6 @@ Description: מדיניות הפרטיות שלנו - כיצד אנו אוספי
 
 
 
-
 - התהליך
 - אודות
 - המלצות
@@ -1038,7 +1036,6 @@ URL: https://eranshomron.co.il/accessibility
 Description: הצהרת הנגישות שלנו - מחויבותנו לנגישות דיגיטלית
 
 הצהרת נגישות
-
 
 
 
@@ -1317,7 +1314,6 @@ URL: https://eranshomron.co.il/terms
 Description: תנאי השימוש באתר - הזכויות והחובות של המשתמשים
 
 תנאי שימוש
-
 
 
 
