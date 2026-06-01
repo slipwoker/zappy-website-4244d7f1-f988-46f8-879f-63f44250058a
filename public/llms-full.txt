@@ -72,7 +72,7 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 
 
-צור קשר
+
 
 
 
@@ -812,7 +812,7 @@ Description: מדיניות הפרטיות שלנו - כיצד אנו אוספי
 
 
 
-צור קשר
+
 
 
 
@@ -1081,7 +1081,7 @@ Description: הצהרת הנגישות שלנו - מחויבותנו לנגיש�
 
 
 
-צור קשר
+
 
 
 
@@ -1359,7 +1359,7 @@ Description: תנאי השימוש באתר - הזכויות והחובות של
 
 
 
-צור קשר
+
 
 
 
