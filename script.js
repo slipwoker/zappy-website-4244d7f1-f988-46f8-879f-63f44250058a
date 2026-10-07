@@ -941,6 +941,42 @@ window.onload = function() {
 })();
 /* ZAPPY_CUSTOM_JS_END:d0acb5031501 */
 
+/* ZAPPY_CUSTOM_JS_START:91a0ae6749bd */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function () {
+  var path = window.location.pathname;
+  var isThankYou = path.indexOf('thank-you') !== -1;
+
+  // Neutralize any unguarded prior block that pushes thank_you_page_view on the home page.
+  // Wrap window.dataLayer.push so that pushes containing thank_you_page_view are dropped
+  // unless we are actually on the thank-you page.
+  window.dataLayer = window.dataLayer || [];
+
+  var originalPush = window.dataLayer.push;
+  window.dataLayer.push = function () {
+    for (var i = 0; i < arguments.length; i++) {
+      var item = arguments[i];
+      if (item && typeof item === 'object' && !Array.isArray(item) && item.event === 'thank_you_page_view' && !isThankYou) {
+        return arguments.length; // silently drop the push on non-thank-you pages
+      }
+    }
+    return originalPush.apply(this, arguments);
+  };
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:91a0ae6749bd */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
