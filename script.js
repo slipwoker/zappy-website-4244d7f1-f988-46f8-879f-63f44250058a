@@ -673,49 +673,6 @@ window.onload = function() {
 })();
 /* ZAPPY_CUSTOM_JS_END:47e5659ff471 */
 
-/* ZAPPY_CUSTOM_JS_START:fd254df22326 */
-(function () {
-  function __zappyCustomInit() {
-    try {
-// Save lead email+phone on form submit so they survive the redirect to /thank-you
-(function () {
-  function onFormSubmit() {
-    // Find the contact form (matches the home page contact form)
-    var form = document.querySelector('.index-contact-form, .contact-form');
-    if (!form) return;
-
-    form.addEventListener('submit', function () {
-      try {
-        var emailField = form.querySelector('input[name="email"], input[type="email"]');
-        var phoneField = form.querySelector('input[name="phone"], input[type="tel"]');
-        var email = emailField ? emailField.value.trim() : '';
-        var phone = phoneField ? phoneField.value.trim() : '';
-        sessionStorage.setItem('lead_email', email);
-        sessionStorage.setItem('lead_phone', phone);
-      } catch (e) {
-        // sessionStorage may be unavailable (privacy mode) — ignore
-      }
-    });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', onFormSubmit);
-  } else {
-    onFormSubmit();
-  }
-})();
-    } catch (e) {
-      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
-    }
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
-  } else {
-    __zappyCustomInit();
-  }
-})();
-/* ZAPPY_CUSTOM_JS_END:fd254df22326 */
-
 /* ZAPPY_CUSTOM_JS_START:15829e7fb7e4 */
 (function () {
   function __zappyCustomInit() {
@@ -770,6 +727,60 @@ window.onload = function() {
   }
 })();
 /* ZAPPY_CUSTOM_JS_END:15829e7fb7e4 */
+
+/* ZAPPY_CUSTOM_JS_START:f1531fef8d20 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function () {
+  // Capture lead email/phone into sessionStorage before the form navigates to /thank-you
+  function captureLead() {
+    var email = document.getElementById('contact-email');
+    var phone = document.getElementById('contact-phone');
+    try {
+      if (email && email.value) sessionStorage.setItem('lead_email', email.value.trim());
+      if (phone && phone.value) sessionStorage.setItem('lead_phone', phone.value.trim());
+    } catch (e) {}
+  }
+
+  // 1) Capture on submit (any submit event on the contact form)
+  function attach() {
+    var form = document.querySelector('.contact-form.Index-contact-form, .index-contact-form, form.contact-form');
+    if (form) {
+      form.addEventListener('submit', captureLead, true);
+    }
+    // Tight fallback: capture on the submit button click too
+    var btn = document.getElementById('contact-email') && document.getElementById('contact-phone');
+    if (!btn) return;
+    var submitBtn = document.querySelector('.index-contact-submit');
+    if (submitBtn) {
+      submitBtn.addEventListener('click', captureLead);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', attach);
+  } else {
+    attach();
+  }
+
+  // 2) Extra safety: capture on page hide / beforeunload (in case submit is programmatic)
+  window.addEventListener('beforeunload', captureLead);
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'hidden') captureLead();
+  });
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:f1531fef8d20 */
 
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
