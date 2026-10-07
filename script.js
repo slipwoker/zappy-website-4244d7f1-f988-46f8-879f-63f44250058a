@@ -673,6 +673,38 @@ window.onload = function() {
 })();
 /* ZAPPY_CUSTOM_JS_END:47e5659ff471 */
 
+/* ZAPPY_CUSTOM_JS_START:bf1de08d1938 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function() {
+  var form = document.querySelector('.index-contact-form');
+  if (!form) return;
+
+  form.addEventListener('submit', function() {
+    try {
+      var email = form.querySelector('[name="email"]');
+      var phone = form.querySelector('[name="phone"]');
+      var name = form.querySelector('[name="name"]');
+
+      if (email && email.value) sessionStorage.setItem('lead_email', email.value.trim());
+      if (phone && phone.value) sessionStorage.setItem('lead_phone', phone.value.trim());
+      if (name && name.value) sessionStorage.setItem('lead_name', name.value.trim());
+    } catch (e) {}
+  });
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:bf1de08d1938 */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){

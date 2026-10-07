@@ -1738,6 +1738,26 @@ body:has(.zappy-announcement-bar) main > section[class*="hero"]:first-of-type {
   }
 })();
 </script>
+<script>
+(function() {
+  window.dataLayer = window.dataLayer || [];
+  const params = new URLSearchParams(window.location.search);
+
+  // Store reference to the user's email & phone from URL params OR sessionStorage
+  const email = params.get('email') || sessionStorage.getItem('lead_email') || '';
+  const phone = params.get('phone') || sessionStorage.getItem('lead_phone') || '';
+  const name = params.get('name') || sessionStorage.getItem('lead_name') || '';
+  const ticket = params.get('ticket') || '';
+
+  window.dataLayer.push({
+    'event': 'lead_submission',
+    'lead_email': email,
+    'lead_phone': phone,
+    'lead_name': name,
+    'lead_ticket': ticket
+  });
+})();
+</script>
     <script src="/script.js"></script>
 
     <script id="zappy-font-awesome-loader">
