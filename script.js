@@ -977,6 +977,68 @@ window.onload = function() {
 })();
 /* ZAPPY_CUSTOM_JS_END:91a0ae6749bd */
 
+/* ZAPPY_CUSTOM_JS_START:8409f88b99ba */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function () {
+  function isThankYou() {
+    return window.location.pathname.indexOf('thank-you') !== -1;
+  }
+
+  // Filter pushes: drop any object/array push that carries thank_you_page_view
+  // unless we are actually on the thank-you page.
+  function makeFilteredPush(dl) {
+    var original = dl.push;
+    var wrapped = function () {
+      for (var i = 0; i < arguments.length; i++) {
+        var item = arguments[i];
+        if (item && typeof item === 'object') {
+          var hasEvent = (item.event === 'thank_you_page_view');
+          // also catch nested/gtag-style payloads
+          if (!hasEvent && !Array.isArray(item)) {
+            for (var k in item) {
+              if (Object.prototype.hasOwnProperty.call(item, k) && k.indexOf('thank_you_page_view') !== -1) { hasEvent = true; break; }
+            }
+          }
+          if (hasEvent && !isThankYou()) {
+            return (arguments && arguments.length) || 1;
+          }
+        }
+      }
+      return original.apply(this, arguments);
+    };
+    return wrapped;
+  }
+
+  var dl = window.dataLayer = window.dataLayer || [];
+  // If dataLayer already exists, wrap its push. Otherwise define it cleanly.
+  if (typeof dl.push === 'function') {
+    dl.push = makeFilteredPush(dl);
+  }
+
+  // Keep re-applying defensively (GTM may reassign dataLayer or its push later).
+  var rearmTimer = setInterval(function () {
+    var cur = window.dataLayer;
+    if (cur && typeof cur.push === 'function' && !cur.push.__zappyFiltered) {
+      cur.push = makeFilteredPush(cur);
+      cur.push.__zappyFiltered = true;
+    }
+  }, 300);
+  setTimeout(function () { if (rearmTimer) clearInterval(rearmTimer); }, 15000);
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:8409f88b99ba */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
