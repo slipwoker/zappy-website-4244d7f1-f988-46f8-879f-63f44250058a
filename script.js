@@ -912,6 +912,56 @@ window.onload = function() {
 })();
 /* ZAPPY_CUSTOM_JS_END:e2465d65497c */
 
+/* ZAPPY_CUSTOM_JS_START:41052d2895bf */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function () {
+  var path = window.location.pathname;
+  if (path.indexOf('thank-you') === -1) return;
+
+  function readLeadData() {
+    var data = { email: '', phone: '' };
+    try {
+      data.email = sessionStorage.getItem('lead_email') || '';
+      data.phone = sessionStorage.getItem('lead_phone') || '';
+    } catch (e) {}
+    try {
+      var params = new URLSearchParams(window.location.search);
+      if (!data.email) data.email = params.get('email') || '';
+      if (!data.phone) data.phone = params.get('phone') || '';
+    } catch (e) {}
+    return data;
+  }
+
+  function pushEvent() {
+    var lead = readLeadData();
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'thank_you_page_view',
+      email: lead.email,
+      phone: lead.phone
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', pushEvent);
+  } else {
+    pushEvent();
+  }
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:41052d2895bf */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
