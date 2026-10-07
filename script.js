@@ -589,6 +589,33 @@ window.onload = function() {
     }
 })();
 
+/* ZAPPY_CUSTOM_JS_START:bce989731ba4 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function () {
+  if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }
+  if (window.__zappyThankYouFired) { return; }
+  if (window.location.pathname.indexOf('/thank-you') === -1) { return; }
+  window.__zappyThankYouFired = true;
+  window.dataLayer.push({
+    event: 'thank_you_page_view',
+    conversionType: 'lead_form',
+    pagePath: window.location.pathname
+  });
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:bce989731ba4 */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
