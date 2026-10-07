@@ -716,28 +716,26 @@ window.onload = function() {
 })();
 /* ZAPPY_CUSTOM_JS_END:fd254df22326 */
 
-/* ZAPPY_CUSTOM_JS_START:c7744edadf18 */
+/* ZAPPY_CUSTOM_JS_START:15829e7fb7e4 */
 (function () {
   function __zappyCustomInit() {
     try {
-// Push thank_you_page_view event with lead details to the dataLayer
 (function () {
+  // Guard against double-firing (bfcache / re-nav / duplicate registration)
+  if (window.__thankYouPageViewPushed) return;
+  window.__thankYouPageViewPushed = true;
+
   function readLeadData() {
     var data = { email: '', phone: '' };
-
-    // 1) Try sessionStorage (set by the form submit handler on the lead form)
     try {
       data.email = sessionStorage.getItem('lead_email') || '';
       data.phone = sessionStorage.getItem('lead_phone') || '';
     } catch (e) {}
-
-    // 2) Fall back to URL query params (in case data is passed via URL)
     try {
       var params = new URLSearchParams(window.location.search);
       if (!data.email) data.email = params.get('email') || '';
       if (!data.phone) data.phone = params.get('phone') || '';
     } catch (e) {}
-
     return data;
   }
 
@@ -752,7 +750,11 @@ window.onload = function() {
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', pushEvent);
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.__thankYouPageViewPushed === true) return;
+      window.__thankYouPageViewPushed = true;
+      pushEvent();
+    });
   } else {
     pushEvent();
   }
@@ -767,7 +769,7 @@ window.onload = function() {
     __zappyCustomInit();
   }
 })();
-/* ZAPPY_CUSTOM_JS_END:c7744edadf18 */
+/* ZAPPY_CUSTOM_JS_END:15829e7fb7e4 */
 
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
