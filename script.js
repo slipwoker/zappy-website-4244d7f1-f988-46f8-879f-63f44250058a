@@ -673,25 +673,44 @@ window.onload = function() {
 })();
 /* ZAPPY_CUSTOM_JS_END:47e5659ff471 */
 
-/* ZAPPY_CUSTOM_JS_START:bf1de08d1938 */
+/* ZAPPY_CUSTOM_JS_START:45a27fc246e7 */
 (function () {
   function __zappyCustomInit() {
     try {
 (function() {
+  function saveField(fieldName, storageKey) {
+    var input = document.querySelector('.index-contact-form [name="' + fieldName + '"]');
+    if (!input) return;
+    var persist = function() {
+      try {
+        var v = (input.value || '').trim();
+        if (v) { sessionStorage.setItem(storageKey, v); }
+        else { sessionStorage.removeItem(storageKey); }
+      } catch (e) {}
+    };
+    input.addEventListener('input', persist);
+    input.addEventListener('change', persist);
+    input.addEventListener('blur', persist);
+  }
+
+  saveField('email', 'lead_email');
+  saveField('phone', 'lead_phone');
+  saveField('name', 'lead_name');
+
+  // Also keep the submit listener as a final safety net
   var form = document.querySelector('.index-contact-form');
-  if (!form) return;
-
-  form.addEventListener('submit', function() {
-    try {
-      var email = form.querySelector('[name="email"]');
-      var phone = form.querySelector('[name="phone"]');
-      var name = form.querySelector('[name="name"]');
-
-      if (email && email.value) sessionStorage.setItem('lead_email', email.value.trim());
-      if (phone && phone.value) sessionStorage.setItem('lead_phone', phone.value.trim());
-      if (name && name.value) sessionStorage.setItem('lead_name', name.value.trim());
-    } catch (e) {}
-  });
+  if (form) {
+    form.addEventListener('submit', function() {
+      try {
+        ['email', 'phone', 'name'].forEach(function(name) {
+          var el = form.querySelector('[name="' + name + '"]');
+          if (el && el.value && el.value.trim()) {
+            sessionStorage.setItem('lead_' + name, el.value.trim());
+          }
+        });
+      } catch (e) {}
+    });
+  }
 })();
     } catch (e) {
       if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
@@ -703,7 +722,7 @@ window.onload = function() {
     __zappyCustomInit();
   }
 })();
-/* ZAPPY_CUSTOM_JS_END:bf1de08d1938 */
+/* ZAPPY_CUSTOM_JS_END:45a27fc246e7 */
 
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
