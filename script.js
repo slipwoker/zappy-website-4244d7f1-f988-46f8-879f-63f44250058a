@@ -905,6 +905,42 @@ window.onload = function() {
 })();
 /* ZAPPY_CUSTOM_JS_END:7aefdd4e28db */
 
+/* ZAPPY_CUSTOM_JS_START:d0acb5031501 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function () {
+  // Site-level guard: intercept dataLayer.push and silently drop any
+  // push whose object carries event === 'thank_you_page_view'.
+  if (window.__thankYouGuardInstalled) return;
+  window.__thankYouGuardInstalled = true;
+
+  var orig = window.dataLayer && window.dataLayer.push;
+  if (!orig || !window.dataLayer) return;
+
+  window.dataLayer.push = function () {
+    var args = Array.prototype.slice.call(arguments);
+    for (var i = 0; i < args.length; i++) {
+      var a = args[i];
+      if (a && typeof a === 'object' && a.event === 'thank_you_page_view') {
+        return; // drop it — never reaches GTM
+      }
+    }
+    return orig.apply(window.dataLayer, args);
+  };
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:d0acb5031501 */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
