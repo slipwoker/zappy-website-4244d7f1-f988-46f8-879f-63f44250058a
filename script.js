@@ -616,6 +616,48 @@ window.onload = function() {
 })();
 /* ZAPPY_CUSTOM_JS_END:bce989731ba4 */
 
+/* ZAPPY_CUSTOM_JS_START:f86b0ec9427d */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function () {
+  if (window.location.pathname.indexOf('/thank-you') === -1) { return; }
+  if (window.__zappyThankYouFired) { return; }
+  window.__zappyThankYouFired = true;
+  if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }
+  var payload = {
+    event: 'thank_you_page_view',
+    conversionType: 'lead_form',
+    pagePath: window.location.pathname
+  };
+  function pushEvent() {
+    window.dataLayer.push(payload);
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'thank_you_page_view', {
+        conversionType: 'lead_form',
+        pagePath: window.location.pathname
+      });
+    }
+  }
+  if (window.google_tag_manager) {
+    pushEvent();
+  } else {
+    window.addEventListener('load', pushEvent);
+    setTimeout(pushEvent, 1500);
+  }
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:f86b0ec9427d */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
