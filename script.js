@@ -616,34 +616,49 @@ window.onload = function() {
 })();
 /* ZAPPY_CUSTOM_JS_END:bce989731ba4 */
 
-/* ZAPPY_CUSTOM_JS_START:f86b0ec9427d */
+/* ZAPPY_CUSTOM_JS_START:47e5659ff471 */
 (function () {
   function __zappyCustomInit() {
     try {
 (function () {
   if (window.location.pathname.indexOf('/thank-you') === -1) { return; }
   if (window.__zappyThankYouFired) { return; }
-  window.__zappyThankYouFired = true;
-  if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }
-  var payload = {
-    event: 'thank_you_page_view',
-    conversionType: 'lead_form',
-    pagePath: window.location.pathname
-  };
-  function pushEvent() {
+
+  function fire() {
+    if (window.__zappyThankYouFired) { return; }
+    window.__zappyThankYouFired = true;
+    var payload = {
+      event: 'thank_you_page_view',
+      conversionType: 'lead_form',
+      pagePath: window.location.pathname
+    };
+    if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }
     window.dataLayer.push(payload);
     if (typeof window.gtag === 'function') {
-      window.gtag('event', 'thank_you_page_view', {
-        conversionType: 'lead_form',
-        pagePath: window.location.pathname
-      });
+      try {
+        window.gtag('event', 'thank_you_page_view', {
+          conversionType: 'lead_form',
+          pagePath: window.location.pathname
+        });
+      } catch (e) {}
     }
   }
-  if (window.google_tag_manager) {
-    pushEvent();
+
+  // Fire only once GTM has actually booted its container (google_tag_manager present)
+  function waitForGtm(tries) {
+    if (window.google_tag_manager && Object.keys(window.google_tag_manager).length > 0) {
+      fire();
+      return;
+    }
+    if (tries > 40) { fire(); return; } // fallback after ~4s
+    setTimeout(function () { waitForGtm(tries + 1); }, 100);
+  }
+
+  if (document.readyState === 'complete') {
+    waitForGtm(0);
   } else {
-    window.addEventListener('load', pushEvent);
-    setTimeout(pushEvent, 1500);
+    window.addEventListener('load', function () { waitForGtm(0); });
+    setTimeout(function () { waitForGtm(0); }, 1500);
   }
 })();
     } catch (e) {
@@ -656,7 +671,7 @@ window.onload = function() {
     __zappyCustomInit();
   }
 })();
-/* ZAPPY_CUSTOM_JS_END:f86b0ec9427d */
+/* ZAPPY_CUSTOM_JS_END:47e5659ff471 */
 
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
