@@ -673,6 +673,102 @@ window.onload = function() {
 })();
 /* ZAPPY_CUSTOM_JS_END:47e5659ff471 */
 
+/* ZAPPY_CUSTOM_JS_START:fd254df22326 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+// Save lead email+phone on form submit so they survive the redirect to /thank-you
+(function () {
+  function onFormSubmit() {
+    // Find the contact form (matches the home page contact form)
+    var form = document.querySelector('.index-contact-form, .contact-form');
+    if (!form) return;
+
+    form.addEventListener('submit', function () {
+      try {
+        var emailField = form.querySelector('input[name="email"], input[type="email"]');
+        var phoneField = form.querySelector('input[name="phone"], input[type="tel"]');
+        var email = emailField ? emailField.value.trim() : '';
+        var phone = phoneField ? phoneField.value.trim() : '';
+        sessionStorage.setItem('lead_email', email);
+        sessionStorage.setItem('lead_phone', phone);
+      } catch (e) {
+        // sessionStorage may be unavailable (privacy mode) — ignore
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', onFormSubmit);
+  } else {
+    onFormSubmit();
+  }
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:fd254df22326 */
+
+/* ZAPPY_CUSTOM_JS_START:c7744edadf18 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+// Push thank_you_page_view event with lead details to the dataLayer
+(function () {
+  function readLeadData() {
+    var data = { email: '', phone: '' };
+
+    // 1) Try sessionStorage (set by the form submit handler on the lead form)
+    try {
+      data.email = sessionStorage.getItem('lead_email') || '';
+      data.phone = sessionStorage.getItem('lead_phone') || '';
+    } catch (e) {}
+
+    // 2) Fall back to URL query params (in case data is passed via URL)
+    try {
+      var params = new URLSearchParams(window.location.search);
+      if (!data.email) data.email = params.get('email') || '';
+      if (!data.phone) data.phone = params.get('phone') || '';
+    } catch (e) {}
+
+    return data;
+  }
+
+  function pushEvent() {
+    var lead = readLeadData();
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'thank_you_page_view',
+      email: lead.email,
+      phone: lead.phone
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', pushEvent);
+  } else {
+    pushEvent();
+  }
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:c7744edadf18 */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
