@@ -86,7 +86,7 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 
 
-### ייעוץ עסקי לתעשייה
+ייעוץ עסקי לתעשייה
 
 
 # מפסיקים לדבר.מתחילים לייצר תוצאות.
@@ -99,10 +99,8 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 הכירו את השיטה
 
 
-
-
-+15  שנות ניסיון
-
++10  שנות ניסיון
+ערן שומרון
 
 
 

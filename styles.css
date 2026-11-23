@@ -5915,6 +5915,36 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 /* zappy-self-heal */
 html body .index-hero-section__inner { display: grid !important; }
 
+
+.index-hero-section__logo {
+  display: block;
+  max-width: 340px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 28px;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.55));
+}
+
+.index-hero-section__name-tag {
+  position: absolute;
+  bottom: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(18,49,79,0.88) 100%);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-align: center;
+  padding: 42px 16px 20px;
+  border-radius: 0 0 24px 24px;
+}
+
+@media (max-width: 768px) {
+.index-hero-section__logo {
+  max-width: 240px;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
