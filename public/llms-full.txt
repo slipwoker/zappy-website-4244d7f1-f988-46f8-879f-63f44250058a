@@ -101,7 +101,7 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 
 
-+10  שנות ניסיון
++15  שנות ניסיון
 
 
 
@@ -387,7 +387,7 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 
 
-+10
++15
 
 ### שנות ניסיון
 
