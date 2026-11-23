@@ -86,7 +86,7 @@ Description: A B2B-focused business targeting low-tech industry owners, factory 
 
 
 
-ייעוץ עסקי לתעשייה
+### ייעוץ עסקי לתעשייה
 
 
 # מפסיקים לדבר.מתחילים לייצר תוצאות.
